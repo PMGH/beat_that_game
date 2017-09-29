@@ -15,6 +15,7 @@ class Player
   end
 
 	def roll(dice)
+		@score = []
 
     for die in dice
       @score << die.roll()

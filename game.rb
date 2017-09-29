@@ -24,40 +24,45 @@ class Game
 
 
   # behaviour
+  # def play_game()
+  #   roll(@dice)
+  # end
 
   # Player rolls dice
   def roll(dice)
+    p "Press enter to roll the dice"
+    gets.chomp
     @player_score = @players[0].roll(dice)
+    p "Hey #{@players[0].get_name}, you rolled #{@player_score}"
+    formulate_score()
   end
 
 
   # Game formulates score (sort, reverse, join, to_i)
   def formulate_score()
     @player_score = @player_score.sort!().reverse!().join().to_i()
+    p "#{@players[0].get_name}'s score is #{@player_score}"
+    check_score()
   end
 
   # Game compares player_score to highest_score
   def check_score()
     if @player_score > @highest_score
       @highest_score = @player_score
+      p "BEAT THAT!"
       @players.rotate!()
-      :play_game
+      roll(@dice)
     elsif @player_score == @highest_score
       @draw = true
-      :end_game
+      end_game()
     else
-      :end_game
+      @won = true
+      end_game()
     end
   end
 
   def play_game()
-    puts ""
     roll(@dice)
-    puts "hello"
-    formulate_score()
-    puts "hellow"
-    check_score()
-    puts "hello"
   end
 
   def end_game()
