@@ -10,6 +10,10 @@ class Player
     return @name
   end
 
+  def get_score()
+    return @score
+  end
+
 	def roll(dice)
 
     for die in dice

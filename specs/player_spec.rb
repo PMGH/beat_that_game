@@ -27,10 +27,23 @@ class TestPlayer < MiniTest::Test
 		assert_equal("Peter", @player2.get_name())
 	end
 
+  def test_get_score()
+    assert_equal([], @player1.get_score())
+  end
+
   def test_player_can_roll_player1()
-    score = @player1.get_score()
-    actual = 1..@dice1.get_sides(), (1..@dice1.get_sides()), (1..@dice1.get_sides()), (1..@dice1.get_sides()) ]
-    assert_equal(actual, @player1.roll(@dice))
+    pos_0 =  (1..6).include?(@player1.roll(@dice)[0])
+
+    pos_1 = (1..6).include?(@player1.roll(@dice)[1])
+
+    pos_2 = (1..6).include?(@player1.roll(@dice)[2])
+
+    pos_3 = (1..6).include?(@player1.roll(@dice)[3])
+
+    actual = [ pos_0, pos_1, pos_2, pos_3 ] # array
+    expected = [true, true, true, true]
+
+    assert_equal(expected, actual)
   end
 
 
