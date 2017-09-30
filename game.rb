@@ -1,8 +1,10 @@
 require_relative('player')
 require_relative('dice')
 
+
 class Game
 
+  # initialize
   def initialize(players, dice)
     @players = players
     @dice = dice
@@ -24,11 +26,8 @@ class Game
 
 
   # behaviour
-  # def play_game()
-  #   roll(@dice)
-  # end
 
-  # Player rolls dice
+  # Gmes gets Player to roll dice
   def roll(dice)
     p "Press enter to roll the dice"
     gets.chomp
@@ -73,13 +72,13 @@ class Game
     end
   end
 
-    # if player_score > highest_score:
+  # if player_score > highest_score:
       # assign player_score to highest_score
       # rotate @players
       # :play_game
-    # else player_score == highest_score
+  # else player_score == highest_score
       # @draw = true
-    # :end_game
+  # :end_game
 
 
 end
