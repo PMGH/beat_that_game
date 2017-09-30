@@ -85,13 +85,4 @@ class Game
     end
   end
 
-    # if player_score > highest_score:
-      # assign player_score to highest_score
-      # rotate @players
-      # :play_game
-    # else player_score == highest_score
-      # @draw = true
-    # :end_game
-
-
 end
