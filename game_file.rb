@@ -16,4 +16,4 @@ require_relative('dice')
 
 @game = Game.new(@players, @dice)
 
-@game.play_game()
+@game.name()
