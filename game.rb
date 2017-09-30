@@ -69,7 +69,7 @@ class Game
     if @draw == true
       puts "Shit game guys. It was a draw."
     elsif @won == true
-      puts "#{@players[0].get_name()} won!!"
+      puts "#{@players[1].get_name()} won!!"
     end
   end
 
