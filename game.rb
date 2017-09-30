@@ -22,12 +22,6 @@ class Game
     return @dice
   end
 
-
-  # behaviour
-  # def play_game()
-  #   roll(@dice)
-  # end
-
   def name()
     p "Player one, please enter your player name!"
     @player1 = gets.chomp
